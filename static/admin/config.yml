@@ -26,47 +26,64 @@ collections:
       - { label: logo, name: logo, widget: image }
       - { name: body, label: Contenu, widget: markdown }
 
-files:
-  - name: "site"
-    label: "site"
-    file: "src/content/site.md"
-    fields: 
-    - { label: logo, name: logo, widget: image }
-    - { name: title, label: Titre, widget: string }
+  - name: site
+    label: Site
+    files: 
+      - name: config
+        label: Configuration
+        file: src/content/site.md
+        fields: 
+        - { label: logo, name: logo, widget: image }
+        - { name: title, label: Titre, widget: string }
 
-  - name: "hero"
-    label: "Hero"
-    file: "src/content/hero.md"
-    fields:
-      - { name: title, label: Titre, widget: string }
-      - { name: action, label: Accroche, widget: text }
-      - { name: body, label: Contenu, widget: markdown }
+  - name: hero
+    label: Hero
+    files: 
+    - name: content
+      label: Contenu
+      file: "src/content/hero.md"
+      fields:
+        - { name: title, label: Titre, widget: string }
+        - { name: action, label: Accroche, widget: text }
+        - { name: body, label: Corps, widget: markdown }
 
-  - name: "presentation"
-    label: "Présentation"
-    file: "src/content/presentation.md"
-    fields:
-      - { name: title, label: Titre, widget: string }
-      - { name: body, label: Contenu, widget: markdown }
+  - name: presentation
+    label: Présentation
+    files: 
+    - name: content
+      label: Contenu
+      file: "src/content/presentation.md"
+      fields:
+        - { name: title, label: Titre, widget: string }
+        - { name: body, label: Contenu, widget: markdown }
 
-  - name: "service"
-    label: "Services"
-    file: "src/content/services.md"
-    fields:
-      - { name: title, label: Titre, widget: string }
-      - { name: body, label: Contenu, widget: markdown }
+  - name: service
+    label: Services
+    files: 
+    - name: content
+      label: Contenu
+      file: "src/content/services.md"
+      fields:
+        - { name: title, label: Titre, widget: string }
+        - { name: body, label: Contenu, widget: markdown }
 
-  - name: "testimonial"
-    label: "Témoignage"
-    file: "src/content/testimonial.md"
-    fields:
-      - { name: title, label: Titre, widget: string }
-      - { name: body, label: Contenu, widget: markdown }
+  - name: testimonial
+    label: Témoignage
+    files: 
+    - name: content
+      label: Contenu
+      file: src/content/testimonial.md
+      fields:
+        - { name: title, label: Titre, widget: string }
+        - { name: body, label: Contenu, widget: markdown }
 
-  - name: "footer"
-    label: "Pied de page"
-    file: "src/content/footer.md"
-    fields:
-      - { name: title, label: Titre, widget: string }
-      - { name: body, label: Contenu, widget: markdown }
+  - name: testimonial
+    label: Témoignage
+    files: 
+    - name: content
+      label: Contenu
+      file: src/content/footer.md
+      fields:
+        - { name: title, label: Titre, widget: string }
+        - { name: body, label: Contenu, widget: markdown }
 
