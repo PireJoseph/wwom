@@ -30,14 +30,14 @@ collections:
 files:
   - name: "site"
     label: "site"
-    file: "src/content/site.md"
+    file: "src/content/site.yml"
     fields: 
     - { label: logo, name: logo, widget: "image" }
     - { name: title, label: Title, widget: "string" }
 
   - name: "hero"
     label: "Hero"
-    file: "src/content/hero.md"
+    file: "src/content/hero.yml"
     fields:
       - { name: title, label: Titre, widget: "string" }
       - { name: content, label: Contenu, widget: markdown }
@@ -45,21 +45,21 @@ files:
 
   - name: "presentation"
     label: "Présentation"
-    file: "src/content/presentation.md"
+    file: "src/content/presentation.yml"
     fields:
       - { name: title, label: Titre, widget: "string" }
       - { name: callToAction, label: Accroche, widget: markdown }
 
   - name: "service"
     label: "Services"
-    file: "src/content/services.md"
+    file: "src/content/services.yml"
     fields:
       - { name: title, label: Titre, widget: "string" }
       - { name: callToAction, label: Accroche, widget: markdown }
 
   - name: "testimonial"
     label: "Témoignage"
-    file: "src/content/testimonial.md"
+    file: "src/content/testimonial.yml"
     fields:
       - { name: title, label: Titre, widget: "string" }
       - { name: content, label: Contenu, widget: markdown }
