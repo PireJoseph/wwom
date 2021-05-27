@@ -15,8 +15,8 @@ const LogoTime = () => (
         y2="9.03033"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#65BFBA" />
-        <stop offset="1" stop-color="#457B9D" />
+        <stop stopColor="#65BFBA" />
+        <stop offset="1" stopColor="#457B9D" />
       </linearGradient>
     </defs>
   </svg>
