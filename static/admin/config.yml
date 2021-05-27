@@ -25,7 +25,6 @@ collections:
       - { name: url, label: Url, widget: string }
       - { name: title, label: Titre, widget: string }
       - { label: logo, name: logo, widget: image }
-      - { name: body, label: Contenu, widget: markdown }
 
   - name: site
     label: Site
