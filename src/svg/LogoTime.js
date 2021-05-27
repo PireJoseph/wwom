@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LogoIcon = () => (
+const LogoTime = () => (
   <svg
     width="403"
     height="301"
@@ -329,4 +329,4 @@ const LogoIcon = () => (
   </svg>
 );
 
-export default LogoIcon;
+export default LogoTime;
