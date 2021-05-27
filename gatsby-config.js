@@ -6,6 +6,9 @@ module.exports = {
         tailwindConfig: `tailwind.config.js`,
       },
     },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-netlify-cms`,
       options: {},
