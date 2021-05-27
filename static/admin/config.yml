@@ -45,7 +45,6 @@ collections:
       fields:
         - { name: title, label: Titre, widget: string }
         - { name: action, label: Accroche, widget: text }
-        - { name: body, label: Corps, widget: markdown }
 
   - name: presentation
     label: Présentation
