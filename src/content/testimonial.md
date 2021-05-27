@@ -10,7 +10,3 @@ A chaque fois qu’un de ses habitués vient pour sa 10ème visite, il reçoit a
 Félicitations Bruno ! C’était ta 10ème visite chez nous :) Si tu nous amènes un nouveau client, ta prochaine coiffure est **GRATUITE** et celle de ta connaissance est à –**50%**”.
 
 Les avantages pour Dylan sont nombreux :
-
-* Il s’est occupé pleinement de son client sans prendre du temps pour en chercher de nouveaux.
-* **WWOM** lui a généré automatiquement un nouveau client qui est tombé sous le charme de son salon !
-* Bruno est heureux de venir se faire coiffer gratuitement la prochaine fois dans son salon préféré.
