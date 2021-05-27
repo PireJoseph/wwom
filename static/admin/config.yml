@@ -11,59 +11,62 @@ collections:
     folder: src/content/services
     create: true
     fields:
-      - { name: path, label: Path, widget: "string" }
-      - { name: order, label: Ordre, widget: datetime }
-      - { name: title, label: Titre, widget: "string" }
-      - { label: "picture", name: "image", widget: "image" }
-      - { name: text, label: text, widget: "text" }
-      - { name: body, label: Body, widget: markdown }
+      - { name: title, label: Titre, widget: string }
+      - { name: order, label: Ordre, widget: number }
+      - { label: picture, name: Image, widget: image }
+      - { name: text, label: Texte, widget: text }
+      - { name: body, label: Contenu, widget: markdown }
   - name: press
     label: Presse
     folder: src/content/press
     create: true
     fields:
-      - { name: path, label: Path, widget: "string" }
-      - { name: url, label: Url, widget: "string" }
-      - { label: "logo", name: "logo", widget: "image" }
-      - { name: body, label: Body, widget: markdown }
+      - { name: url, label: Url, widget: string }
+      - { name: title, label: Titre, widget: string }
+      - { label: logo, name: logo, widget: image }
+      - { name: body, label: Contenu, widget: markdown }
 
 files:
   - name: "site"
     label: "site"
     file: "src/content/site.yml"
     fields: 
-    - { label: logo, name: logo, widget: "image" }
-    - { name: title, label: Title, widget: "string" }
+    - { label: logo, name: logo, widget: image }
+    - { name: title, label: Titre, widget: string }
 
   - name: "hero"
     label: "Hero"
     file: "src/content/hero.yml"
     fields:
-      - { name: title, label: Titre, widget: "string" }
-      - { name: content, label: Contenu, widget: markdown }
-      - { name: callToAction, label: Accroche, widget: markdown }
+      - { name: title, label: Titre, widget: string }
+      - { name: action, label: Accroche, widget: text }
+      - { name: body, label: Contenu, widget: markdown }
 
   - name: "presentation"
     label: "Présentation"
     file: "src/content/presentation.yml"
     fields:
-      - { name: title, label: Titre, widget: "string" }
-      - { name: callToAction, label: Accroche, widget: markdown }
+      - { name: title, label: Titre, widget: string }
+      - { name: body, label: Contenu, widget: markdown }
 
   - name: "service"
     label: "Services"
     file: "src/content/services.yml"
     fields:
-      - { name: title, label: Titre, widget: "string" }
-      - { name: callToAction, label: Accroche, widget: markdown }
+      - { name: title, label: Titre, widget: string }
+      - { name: body, label: Contenu, widget: markdown }
 
   - name: "testimonial"
     label: "Témoignage"
     file: "src/content/testimonial.yml"
     fields:
-      - { name: title, label: Titre, widget: "string" }
-      - { name: content, label: Contenu, widget: markdown }
+      - { name: title, label: Titre, widget: string }
+      - { name: body, label: Contenu, widget: markdown }
 
-
-
+  - name: "footer"
+    label: "Pied de page"
+    file: "src/content/footer.yml"
+    fields:
+      - { name: title, label: Titre, widget: string }
+      - { name: body, label: Contenu, widget: markdown }
 
