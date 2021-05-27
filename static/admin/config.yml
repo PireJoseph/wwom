@@ -1,6 +1,8 @@
 Copystatic/admin/config.yml: copy code to clipboard
 backend:
-  name: wwom
+    name: github
+    repo: PireJoseph/gridsome-portfolio
+    branch: main
 media_folder: static/assets
 public_folder: /assets
 collections:
