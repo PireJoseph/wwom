@@ -24,7 +24,17 @@ collections:
     fields:
       - { name: url, label: Url, widget: string }
       - { name: title, label: Titre, widget: string }
-      - { label: logo, name: logo, widget: image }
+      - { label: icon, name: Icone, widget: image }
+
+
+  - name: pros
+    label: Pros
+    folder: src/content/pros
+    create: true
+    fields:
+      - { name: url, label: Url, widget: string }
+      - { name: title, label: Titre, widget: string }
+      - { label: logo, name: Logo, widget: image }
 
   - name: site
     label: Site
@@ -33,7 +43,7 @@ collections:
         label: Configuration
         file: src/content/site.md
         fields: 
-        - { label: logo, name: logo, widget: image }
+        - { label: logo, name: Logo, widget: image }
         - { name: title, label: Titre, widget: string }
 
   - name: hero
