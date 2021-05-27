@@ -22,8 +22,9 @@ collections:
     folder: src/content/press
     create: true
     fields:
-      - { name: url, label: Url, widget: string }
       - { name: title, label: Titre, widget: string }
+      - { name: order, label: Ordre, widget: number }
+      - { name: url, label: Url, widget: string }
       - { label: icon, name: Icone, widget: image }
 
 
@@ -33,6 +34,7 @@ collections:
     create: true
     fields:
       - { name: title, label: Titre, widget: string }
+      - { name: order, label: Ordre, widget: number }
       - { label: icon, name: Icône, widget: image }
       - { name: body, label: Contenu, widget: markdown }
 
