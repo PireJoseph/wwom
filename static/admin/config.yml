@@ -6,7 +6,7 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
-  - name: service
+  - name: services
     label: Services
     folder: src/content/services
     create: true
@@ -16,6 +16,7 @@ collections:
       - { label: picture, name: Image, widget: image }
       - { name: text, label: Texte, widget: text }
       - { name: body, label: Contenu, widget: markdown }
+    
   - name: press
     label: Presse
     folder: src/content/press
@@ -57,12 +58,12 @@ collections:
         - { name: title, label: Titre, widget: string }
         - { name: body, label: Contenu, widget: markdown }
 
-  - name: service
-    label: Services
+  - name: action
+    label: Appel à l'action
     files: 
     - name: content
       label: Contenu
-      file: "src/content/services.md"
+      file: "src/content/action.md"
       fields:
         - { name: title, label: Titre, widget: string }
         - { name: body, label: Contenu, widget: markdown }
@@ -77,8 +78,8 @@ collections:
         - { name: title, label: Titre, widget: string }
         - { name: body, label: Contenu, widget: markdown }
 
-  - name: testimonial
-    label: Témoignage
+  - name: footer
+    label: Pied de Page
     files: 
     - name: content
       label: Contenu
