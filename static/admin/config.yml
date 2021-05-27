@@ -32,9 +32,9 @@ collections:
     folder: src/content/pros
     create: true
     fields:
-      - { name: url, label: Url, widget: string }
       - { name: title, label: Titre, widget: string }
-      - { label: logo, name: Logo, widget: image }
+      - { label: icon, name: Icône, widget: image }
+      - { name: body, label: Contenu, widget: markdown }
 
   - name: site
     label: Site
