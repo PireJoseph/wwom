@@ -1,4 +1,16 @@
 ---
-title: Comment obtenir plus de clients ?
+title: L‘exemple d’une entreprise qui utilise WWOM
 ---
-WWOM améliore le bouche à oreille de votre business !
+Dylan est gérant d’un salon de coiffure à Bruxelles et il voulait agrandir sa clientèle.
+
+Il a entendu parler de notre outil **WWOM** et a intégré notre **version BETA** dans son programme de gestion de clients. Grâce à notre outil totalement personnalisable, il a pu choisir le paramètre suivant :
+
+A chaque fois qu’un de ses habitués vient pour sa 10ème visite, il reçoit automatiquement ce sms :
+
+Félicitations Bruno ! C’était ta 10ème visite chez nous :) Si tu nous amènes un nouveau client, ta prochaine coiffure est **GRATUITE** et celle de ta connaissance est à –**50%**”.
+
+Les avantages pour Dylan sont nombreux :
+
+* Il s’est occupé pleinement de son client sans prendre du temps pour en chercher de nouveaux.
+* **WWOM** lui a généré automatiquement un nouveau client qui est tombé sous le charme de son salon !
+* Bruno est heureux de venir se faire coiffer gratuitement la prochaine fois dans son salon préféré.
