@@ -2,6 +2,8 @@
 title: Propects
 order: 2
 Image: /assets/serviceProspect.svg
-text: Un outil à la fois puissant et facile
+text: Générer plus de prospects automatiquement
 ---
-BAO peut s’incorporer dans votre CRM en une fraction de seconde. Une fois installé, il aidera vos clients à partager votre affaire à leur entourage. Il déterminera automatiquement quand et comment parler à votre clientèle pour rendre le bouche à oreille le plus optimal possible.
+Le bouche à oreille est la manière la plus efficace d’obtenir des clients fidèles. 
+
+C’est pourquoi il est important d’adopter la meilleure solution, car ce sont vos clients actuels qui amèneront les suivants.
