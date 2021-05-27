@@ -59,7 +59,7 @@ files:
 
   - name: "testimonial"
     label: "Témoignage"
-    file: "src/content.testimonial.yml"
+    file: "src/content/testimonial.yml"
     fields:
       - { name: title, label: Titre, widget: "string" }
       - { name: content, label: Contenu, widget: markdown }
