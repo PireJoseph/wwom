@@ -10,5 +10,27 @@ module.exports = {
       resolve: `gatsby-plugin-netlify-cms`,
       options: {},
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `items`,
+        path: `${__dirname}/src/content`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `services`,
+        path: `${__dirname}/src/content/services`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `press`,
+        path: `${__dirname}/src/content/press`,
+      },
+    },
+    `gatsby-transformer-remark`,
   ],
 };
