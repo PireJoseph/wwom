@@ -1,5 +1,5 @@
 ---
-title: propects
+title: Propects
 order: 2
 Image: /assets/serviceProspect.svg
 text: Un outil à la fois puissant et facile
