@@ -1,4 +1,5 @@
 import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
 
 import HeroImage from '../../svg/HeroImage';
 import Button from '../../components/Button';
@@ -13,11 +14,20 @@ const Hero = ({ className, children }) => (
       <p className="mt-8 md:mt-12">
         <Button size="lg">Découvrir</Button>
       </p>
-      {/* <p className="mt-4 text-gray-600">Sed fermentum felis ut cursu</p> */}
+      <p className="mt-4 text-gray-600">Sed fermentum felis ut cursu</p>
     </div>
     <div className="lg:w-1/2">
       <HeroImage />
     </div>
+
+    {/* <StaticQuery
+      query={graphql`
+      query 
+    `}
+      render={(data) => <>
+      
+      </>}
+    /> */}
   </div>
 );
 export default Hero;

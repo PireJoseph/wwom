@@ -1,6 +1,6 @@
 ---
-title: Relation
-order: 1
-Icône: /assets/iconHeart.svg
+title: Client
+order: 2
+Icône: /assets/iconUserAdd.svg
 ---
-Il s’est occupé pleinement de son client sans prendre du temps pour en chercher de nouveaux.
+WWOM lui a généré automatiquement un nouveau client qui est tombé sous le charme de son salon !
