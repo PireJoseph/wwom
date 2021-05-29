@@ -9,33 +9,39 @@ collections:
   - name: services
     label: Services
     folder: src/content/services
+    media_folder: ''
+    public_folder: ''
     create: true
     fields:
       - { name: title, label: Titre, widget: string }
       - { name: order, label: Ordre, widget: number }
-      - { label: picture, name: Image, widget: image }
+      - { name: picture, label: Image, widget: image }
       - { name: text, label: Texte, widget: text }
       - { name: body, label: Contenu, widget: markdown }
     
   - name: press
     label: Presse
     folder: src/content/press
+    media_folder: ''
+    public_folder: ''
     create: true
     fields:
       - { name: title, label: Titre, widget: string }
       - { name: order, label: Ordre, widget: number }
       - { name: url, label: Url, widget: string }
-      - { label: icon, name: Icone, widget: image }
+      - { name: icon, label: Icône, widget: image }
 
 
   - name: pros
     label: Pros
     folder: src/content/pros
+    media_folder: ''
+    public_folder: ''
     create: true
     fields:
       - { name: title, label: Titre, widget: string }
       - { name: order, label: Ordre, widget: number }
-      - { label: icon, name: Icône, widget: image }
+      - { name: icon, label: Icône,  widget: image }
       - { name: body, label: Contenu, widget: markdown }
 
   - name: site
@@ -50,6 +56,8 @@ collections:
 
   - name: hero
     label: Hero
+    media_folder: ''
+    public_folder: ''
     files: 
     - name: content
       label: Contenu
@@ -61,6 +69,8 @@ collections:
 
   - name: presentation
     label: Présentation
+    media_folder: ''
+    public_folder: ''
     files: 
     - name: content
       label: Contenu
@@ -71,6 +81,8 @@ collections:
 
   - name: action
     label: Appel à l'action
+    media_folder: ''
+    public_folder: ''
     files: 
     - name: content
       label: Contenu
@@ -81,6 +93,8 @@ collections:
 
   - name: testimonial
     label: Témoignage
+    media_folder: ''
+    public_folder: ''
     files: 
     - name: content
       label: Contenu
@@ -91,6 +105,8 @@ collections:
 
   - name: footer
     label: Pied de Page
+    media_folder: ''
+    public_folder: ''
     files: 
     - name: content
       label: Contenu

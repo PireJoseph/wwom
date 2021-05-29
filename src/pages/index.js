@@ -1,22 +1,23 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 
 import Layout from '../components/layout/Layout';
 
-import Hero from '../components/home/Hero';
-import Presentation from '../components/home/Presentation';
-import Services from '../components/home/Services';
-import Testimonial from '../components/home/Testimonial';
-import Press from '../components/home/Press';
-import Action from '../components/home/Action';
+import Hero from '../components/pages/index/Hero';
+import Presentation from '../components/pages/index/Presentation';
+import Services from '../components/pages/index/Services';
+import Testimonial from '../components/pages/index/Testimonial';
+import Press from '../components/pages/index/Press';
+import Action from '../components/pages/index/Action';
 
-const Index = () => (
+const Index = ({ data }) => (
   <Layout>
     <section className="pt-20 md:pt-40">
-      <Hero />
+      <Hero hero={data.hero} />
     </section>
 
     <section id="presentation" className="py-20 lg:pb-40 lg:pt-48">
-      <Presentation />
+      <Presentation presentation={data.presentation} />
     </section>
 
     <section id="services">
@@ -35,5 +36,106 @@ const Index = () => (
     </section>
   </Layout>
 );
+
+export const query = graphql`
+  query HomePageQuery {
+    site: file(name: { eq: "site" }) {
+      childMarkdownRemark {
+        frontmatter {
+          logo
+          title
+        }
+      }
+    }
+    hero: file(name: { eq: "hero" }) {
+      childMarkdownRemark {
+        html
+        frontmatter {
+          title
+          action
+          image
+        }
+      }
+    }
+    presentation: file(name: { eq: "presentation" }) {
+      childMarkdownRemark {
+        html
+        frontmatter {
+          title
+        }
+      }
+    }
+    testimonial: file(name: { eq: "testimonial" }) {
+      childMarkdownRemark {
+        html
+        frontmatter {
+          title
+        }
+      }
+    }
+    action: file(name: { eq: "action" }) {
+      childMarkdownRemark {
+        html
+        frontmatter {
+          title
+        }
+      }
+    }
+    footer: file(name: { eq: "footer" }) {
+      childMarkdownRemark {
+        frontmatter {
+          title
+        }
+      }
+    }
+    services: allFile(filter: { sourceInstanceName: { eq: "services" } }) {
+      edges {
+        node {
+          sourceInstanceName
+          childMarkdownRemark {
+            html
+            frontmatter {
+              title
+              order
+              picture
+              text
+            }
+          }
+        }
+      }
+    }
+    pros: allFile(filter: { sourceInstanceName: { eq: "pros" } }) {
+      edges {
+        node {
+          sourceInstanceName
+          childMarkdownRemark {
+            html
+            frontmatter {
+              title
+              order
+              icon
+            }
+          }
+        }
+      }
+    }
+    press: allFile(filter: { sourceInstanceName: { eq: "press" } }) {
+      edges {
+        node {
+          sourceInstanceName
+          childMarkdownRemark {
+            html
+            frontmatter {
+              title
+              order
+              url
+              logo
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default Index;
