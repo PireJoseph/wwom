@@ -46,6 +46,8 @@ collections:
 
   - name: site
     label: Site
+    media_folder: ''
+    public_folder: ''
     files: 
       - name: config
         label: Configuration
@@ -53,6 +55,7 @@ collections:
         fields: 
         - { name: action, label: Accroche, widget: text }
         - { name: title, label: Titre, widget: string }
+        - { name: logo, label: Logo, widget: image}
 
   - name: hero
     label: Hero
