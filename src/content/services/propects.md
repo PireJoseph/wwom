@@ -1,7 +1,7 @@
 ---
 title: Propects
 order: 2
-picture: /assets/serviceProspect.svg
+picture: serviceprospect.svg
 text: Générer plus de prospects automatiquement
 ---
 Le bouche à oreille est la manière la plus efficace d’obtenir des clients fidèles. 
