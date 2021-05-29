@@ -1,17 +1,22 @@
 module.exports = {
+  siteMetadata: {
+    siteUrl: `https://www.wwom.io`,
+  },
   plugins: [
-    {
-      resolve: `gatsby-theme-codebushi`,
-      options: {
-        tailwindConfig: `tailwind.config.js`,
-      },
-    },
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-netlify-cms`,
+    `gatsby-transformer-remark`,
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
-      resolve: `gatsby-plugin-netlify-cms`,
-      options: {},
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/`, `/decouvrir`],
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -41,6 +46,12 @@ module.exports = {
         path: `${__dirname}/src/content/press`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/static/assets`,
+      },
+    },
   ],
 };
