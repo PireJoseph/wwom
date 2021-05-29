@@ -1,10 +1,30 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import { useStaticQuery, graphql } from 'gatsby';
+import Button from '../Button';
+import Image from '../Image';
 
-import Button from '../../Button';
-
-const Hero = ({ hero }) => {
-  const Img = styled.img``;
+const Hero = () => {
+  const { hero } = useStaticQuery(graphql`
+    query HeroQuery {
+      hero: file(name: { eq: "hero" }) {
+        childMarkdownRemark {
+          html
+          frontmatter {
+            title
+            action
+            image {
+              publicURL
+              absolutePath
+              relativePath
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
 
   return (
     <div className="container mx-auto px-8 lg:flex">
@@ -20,10 +40,8 @@ const Hero = ({ hero }) => {
         </p>
       </div>
       <div className="lg:w-1/2 lg:h-60">
-        <Img
-          src={hero.childMarkdownRemark.frontmatter.image}
-          loading="eager"
-          alt={hero.childMarkdownRemark.frontmatter.title}
+        <Image
+          image={hero.childMarkdownRemark.frontmatter.image}
           title={hero.childMarkdownRemark.frontmatter.title}
         />
       </div>

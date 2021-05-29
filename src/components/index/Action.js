@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Button from '../../Button';
+import Button from '../Button';
 
-import { useCmsContent } from '../../../hooks/use-cms-content';
+import { useCmsContent } from '../../hooks/use-cms-content';
 
 const Action = () => {
   const { action } = useCmsContent();

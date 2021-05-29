@@ -1,11 +1,10 @@
 import React from 'react';
 
-import LabelText from '../../LabelText';
-import StatsBox from '../../StatsBox';
+import LabelText from '../LabelText';
+import StatsBox from '../StatsBox';
 
-const Testimonial = ({ className, children }) => (
+const Testimonial = () => (
   <>
-    {' '}
     <div className="container mx-auto text-center">
       <LabelText className="text-gray-600">Our customers get results</LabelText>
       <div className="flex flex-col sm:flex-row mt-8 lg:px-24">

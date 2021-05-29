@@ -3,21 +3,21 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/layout/Layout';
 
-import Hero from '../components/pages/index/Hero';
-import Presentation from '../components/pages/index/Presentation';
-import Services from '../components/pages/index/Services';
-import Testimonial from '../components/pages/index/Testimonial';
-import Press from '../components/pages/index/Press';
-import Action from '../components/pages/index/Action';
+import Hero from '../components/index/Hero';
+import Presentation from '../components/index/Presentation';
+import Services from '../components/index/Services';
+import Testimonial from '../components/index/Testimonial';
+import Press from '../components/index/Press';
+import Action from '../components/index/Action';
 
 const Index = ({ data }) => (
   <Layout>
     <section className="pt-20 md:pt-40">
-      <Hero hero={data.hero} />
+      <Hero />
     </section>
 
     <section id="presentation" className="py-20 lg:pb-40 lg:pt-48">
-      <Presentation presentation={data.presentation} />
+      <Presentation />
     </section>
 
     <section id="services">
@@ -27,7 +27,7 @@ const Index = ({ data }) => (
       <Testimonial />
     </section>
 
-    <section className="container mx-auto my-20 py-24 bg-gray-200 rounded-lg text-center">
+    <section className="container mx-auto my-20 py-24">
       <Action />
     </section>
 
@@ -42,7 +42,6 @@ export const query = graphql`
     site: file(name: { eq: "site" }) {
       childMarkdownRemark {
         frontmatter {
-          logo
           title
         }
       }
@@ -53,7 +52,6 @@ export const query = graphql`
         frontmatter {
           title
           action
-          image
         }
       }
     }
@@ -97,7 +95,6 @@ export const query = graphql`
             frontmatter {
               title
               order
-              picture
               text
             }
           }
@@ -113,7 +110,6 @@ export const query = graphql`
             frontmatter {
               title
               order
-              icon
             }
           }
         }

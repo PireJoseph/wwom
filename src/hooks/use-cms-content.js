@@ -18,7 +18,6 @@ export const useCmsContent = () => {
             frontmatter {
               title
               action
-              image
             }
           }
         }

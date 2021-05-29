@@ -46,12 +46,5 @@ module.exports = {
         path: `${__dirname}/src/content/press`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `assets`,
-        path: `${__dirname}/static/assets`,
-      },
-    },
   ],
 };

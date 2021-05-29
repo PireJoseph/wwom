@@ -1,11 +1,10 @@
 import React from 'react';
 
-import CustomerCard from '../../CustomerCard';
-import LabelText from '../../LabelText';
-import Button from '../../Button';
-import customerData from '../../../data/customer-data';
+import CustomerCard from '../CustomerCard';
+import LabelText from '../LabelText';
+import customerData from '../../data/customer-data';
 
-const Press = ({ className, children }) => (
+const Press = () => (
   <>
     <div className="container mx-auto">
       <LabelText className="mb-8 text-gray-600 text-center">What customers are saying</LabelText>
