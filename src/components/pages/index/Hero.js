@@ -1,14 +1,11 @@
 import React from 'react';
+import styled from '@emotion/styled';
 
-import HeroImage from '../../svg/HeroImage';
-import Button from '../../components/Button';
+import Button from '../../Button';
 
-import { useContentHero } from '../../hooks/use-content-hero';
-import { StaticImage } from 'gatsby-plugin-image';
+const Hero = ({ hero }) => {
+  const Img = styled.img``;
 
-const Hero = () => {
-  const { hero } = useContentHero();
-  const heroImagePublicPath = '../../../static' + hero.childMarkdownRemark.frontmatter.image;
   return (
     <div className="container mx-auto px-8 lg:flex">
       <div className="text-center lg:text-left lg:w-1/2">
@@ -22,12 +19,12 @@ const Hero = () => {
           <Button size="lg">Découvrir</Button>
         </p>
       </div>
-      <div className="lg:w-1/2">
-        {heroImagePublicPath}
-        <StaticImage
-          src={'../../../static/assets/heroImage.svg'}
-          formats={['auto', 'webp', 'avif']}
+      <div className="lg:w-1/2 lg:h-60">
+        <Img
+          src={hero.childMarkdownRemark.frontmatter.image}
+          loading="eager"
           alt={hero.childMarkdownRemark.frontmatter.title}
+          title={hero.childMarkdownRemark.frontmatter.title}
         />
       </div>
     </div>

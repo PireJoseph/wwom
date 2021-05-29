@@ -1,9 +1,9 @@
 import React from 'react';
 
-import CustomerCard from '../CustomerCard';
-import LabelText from '../LabelText';
-import Button from '../Button';
-import customerData from '../../data/customer-data';
+import CustomerCard from '../../CustomerCard';
+import LabelText from '../../LabelText';
+import Button from '../../Button';
+import customerData from '../../../data/customer-data';
 
 const Press = ({ className, children }) => (
   <>

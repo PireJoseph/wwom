@@ -1,7 +1,7 @@
 import React from 'react';
 
-import LabelText from '../../components/LabelText';
-import StatsBox from '../../components/StatsBox';
+import LabelText from '../../LabelText';
+import StatsBox from '../../StatsBox';
 
 const Testimonial = ({ className, children }) => (
   <>

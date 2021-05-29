@@ -1,7 +1,7 @@
 import React from 'react';
 
-import SvgCharts from '../../svg/SvgCharts';
-import SplitSection from '../../components/SplitSection';
+import SvgCharts from '../../../svg/SvgCharts';
+import SplitSection from '../../SplitSection';
 
 const Services = ({ className, children }) => (
   <>
