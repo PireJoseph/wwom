@@ -1,7 +1,7 @@
 ---
 title: Temps
 order: 1
-picture: /assets/serviceTime.svg
+picture: servicetime.svg
 text: Gagnez plus de temps pour vous et vos clients
 ---
 Chez BAO, nous savons à quel point il est difficile de trouver des clients fidèles...
