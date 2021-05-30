@@ -27,6 +27,7 @@ collections:
     create: true
     fields:
       - { name: title, label: Titre, widget: string }
+      - { name: heading, label: En-tête, widget: string }
       - { name: order, label: Ordre, widget: number }
       - { name: url, label: Url, widget: string }
       - { name: icon, label: Icône, widget: image }

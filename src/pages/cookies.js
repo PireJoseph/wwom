@@ -3,6 +3,6 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/layout/Layout';
 
-const Decouvrir = ({}) => <Layout>Decouvrir</Layout>;
+const Cookies = ({}) => <Layout>Cookies</Layout>;
 
-export default Decouvrir;
+export default Cookies;

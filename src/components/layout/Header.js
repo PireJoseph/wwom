@@ -1,14 +1,16 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import Button from '../Button';
+import { Link } from 'gatsby';
+
 import Image from '../Image';
+import DiscoverLink from '../DiscoverLink';
 
 import { useStaticQuery, graphql } from 'gatsby';
 
-const Header = () => {
+const Header = ({ logoShown = true, contactShown = true, links = [] }) => {
   const { site } = useStaticQuery(graphql`
-    query HeroQuery {
-      hero: file(name: { eq: "site" }) {
+    query HeaderQuery {
+      site: file(name: { eq: "site" }) {
         childMarkdownRemark {
           html
           frontmatter {
@@ -28,32 +30,29 @@ const Header = () => {
   `);
 
   return (
-    <header className="sticky top-0 bg-white shadow">
+    <header className="sticky top-0 bg-white shadow ">
       <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-4 px-8">
         <div className="flex items-center text-2xl">
           <div className=" mr-3 4xl">
-            <Image
-              image={hero.childMarkdownRemark.frontmatter.logo}
-              title={hero.childMarkdownRemark.frontmatter.title}
-            />
+            <Link to="/">
+              <Image
+                className="w-32"
+                image={site.childMarkdownRemark.frontmatter.logo}
+                title={site.childMarkdownRemark.frontmatter.title}
+              />
+            </Link>
           </div>
         </div>
         <div className="flex mt-4 sm:mt-0">
-          <AnchorLink className="px-4" href="#presentation">
-            Présentation
-          </AnchorLink>
-          <AnchorLink className="px-4" href="#services">
-            Services
-          </AnchorLink>
-          <AnchorLink className="px-4" href="#testimonial">
-            Témoignages
-          </AnchorLink>
-          <AnchorLink className="px-4" href="#press">
-            Presse
-          </AnchorLink>
+          {links.map((link, index) => (
+            <AnchorLink key={index} className="px-4" href={'#' + link.id}>
+              {link.label}
+            </AnchorLink>
+          ))}
         </div>
         <div className="hidden md:block">
-          <Button className="text-sm">Découvrir</Button>
+          {/* <Link to="/decouvrir">Découvrir</Link> */}
+          <DiscoverLink size="xs" />
         </div>
       </div>
     </header>

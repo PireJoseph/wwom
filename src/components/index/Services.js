@@ -6,10 +6,11 @@ import SplitSection from '../SplitSection';
 import Image from '../Image';
 
 const Services = () => {
-  let { services } = useStaticQuery(graphql`
+  const { services } = useStaticQuery(graphql`
     query ServicesQuery {
       services: allFile(
         filter: { sourceInstanceName: { eq: "services" }, extension: { eq: "md" } }
+        sort: { order: ASC, fields: childMarkdownRemark___frontmatter___order }
       ) {
         edges {
           node {
@@ -32,82 +33,46 @@ const Services = () => {
     }
   `);
 
-  let serviceJSX = services.edges
-    .sort(({ node: nodeA }, { node: nodeB }) => {
-      return nodeA.childMarkdownRemark.frontmatter.order <
-        nodeB.childMarkdownRemark.frontmatter.order
-        ? -1
-        : +1;
-    })
-    .map(({ node }, index) => {
-      return (
+  return (
+    <>
+      {services.edges.map(({ node }, index) => (
         <SplitSection
           key={index}
           reverseOrder={!(index % 2 === 0)}
+          className="mt-16 lg:mt-0 my-16"
           primarySlot={
-            <div className="lg:pr-32 xl:pr-48">
-              <h3 className="text-3xl font-semibold leading-tight">
-                {node.childMarkdownRemark.frontmatter.title}
-              </h3>
-              <p className="mt-8 text-xl font-light leading-relaxed">
-                {node.childMarkdownRemark.frontmatter.text}
-              </p>
+            <div>
+              <div className="flex flex-col justify-between items-center xl:flex-row">
+                <div className="w-32">
+                  <span className="inline-flex justify-center items-center font-bold text-3xl w-16 h-16 rounded-full bg-secondary text-white mb-4 xl:mb-0">
+                    {index + 1}
+                  </span>
+                </div>
+                <h3
+                  className={
+                    'inline-flex text-3xl font-bold leading-tight text-primary-darker  ' +
+                    (index % 2 === 0 ? 'xl:self-end' : 'xl:self-start')
+                  }
+                >
+                  {node.childMarkdownRemark.frontmatter.text}
+                </h3>
+              </div>
+
+              <p
+                className="mt-8 text-xl font-light leading-relaxed pb-12"
+                dangerouslySetInnerHTML={{ __html: node.childMarkdownRemark.html }}
+              ></p>
             </div>
           }
           secondarySlot={
             <Image
               image={node.childMarkdownRemark.frontmatter.picture}
               title={node.childMarkdownRemark.frontmatter.title}
+              className={' w-86 h-auto mx-auto'}
             />
           }
         />
-      );
-    });
-
-  return (
-    <>
-      {serviceJSX}
-      {/* <SplitSection
-        primarySlot={
-          <div className="lg:pr-32 xl:pr-48">
-            <h3 className="text-3xl font-semibold leading-tight">Market Analysis</h3>
-            <p className="mt-8 text-xl font-light leading-relaxed">
-              Our team of enthusiastic marketers will analyse and evaluate how your company stacks
-              against the closest competitors
-            </p>
-          </div>
-        }
-        secondarySlot={<SvgCharts />}
-      />
-      <SplitSection
-        reverseOrder
-        primarySlot={
-          <div className="lg:pl-32 xl:pl-48">
-            <h3 className="text-3xl font-semibold leading-tight">
-              Design And Plan Your Business Growth Steps
-            </h3>
-            <p className="mt-8 text-xl font-light leading-relaxed">
-              Once the market analysis process is completed our staff will search for opportunities
-              that are in reach
-            </p>
-          </div>
-        }
-        secondarySlot={<SvgCharts />}
-      />
-      <SplitSection
-        primarySlot={
-          <div className="lg:pr-32 xl:pr-48">
-            <h3 className="text-3xl font-semibold leading-tight">
-              Search For Performance Optimization
-            </h3>
-            <p className="mt-8 text-xl font-light leading-relaxed">
-              With all the information in place you will be presented with an action plan that your
-              company needs to follow
-            </p>
-          </div>
-        }
-        secondarySlot={<SvgCharts />}
-      /> */}
+      ))}
     </>
   );
 };

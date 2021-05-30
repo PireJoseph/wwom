@@ -10,9 +10,24 @@ module.exports = {
       white: colors.white,
       gray: colors.gray,
       primary: {
-        lighter: 'hsl(207, 73%, 52%)',
-        DEFAULT: 'hsl(207, 73%, 57%)',
-        darker: 'hsl(207, 73%, 44%)',
+        lighter: '#3E6F8D',
+        DEFAULT: '#38647F',
+        darker: '#325A72',
+      },
+      secondary: {
+        lighter: '#81F4E1',
+        DEFAULT: '#68C6B6',
+        darker: '#5EB2A4',
+      },
+      alert: {
+        lighter: '#FFBA49',
+        DEFAULT: '#E5A742',
+        darker: '#CF973B',
+      },
+      danger: {
+        lighter: '#DF6556',
+        DEFAULT: '#C95B4E',
+        darker: '#B55246',
       },
     },
   },
