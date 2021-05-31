@@ -1,24 +1,28 @@
 import React from 'react';
 
 const sizes = {
-  default: `py-3 px-8`,
-  lg: `py-4 px-12`,
-  xl: `py-5 px-16 text-lg`,
+  xs: `py-1 px-4 border text-sm font-semibold`,
+  default: `py-2 px-8 border-2 font-bold`,
+  lg: `py-2 px-12 border-4 font-bold text-lg font-bold`,
+  xl: `py-4 px-16 border-4  text-xl font-bold text-lg font-bold`,
 };
 
-const Button = ({ children, className = '', size }) => {
+const Button = ({ children, type = 'button', className = '', size = 'default' }) => {
   return (
     <button
-      type="button"
       className={`
-        ${sizes[size] || sizes.default}
+        ${sizes[size]}
         ${className}
-        border-4 border-alert-lighter
-        hover:bg-primary-darker
+        border-alert-lighter
+        bg-white
+        text-alert-lighter
         rounded-2xl
-        py-0
-        text-white
+        hover:bg-alert-lighter
+        hover:text-white
+        cursor-pointer
+        text-center
     `}
+      type={type}
     >
       {children}
     </button>

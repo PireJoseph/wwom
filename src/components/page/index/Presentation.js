@@ -1,8 +1,8 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import Card from '../Card';
-import DiscoverLink from '../DiscoverLink';
+import Card from '../../Card';
+import DiscoverLink from '../../DiscoverLink';
 
 const Presentation = () => {
   const { presentation } = useStaticQuery(graphql`

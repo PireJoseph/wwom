@@ -1,5 +1,5 @@
 ---
-title: Comment obtenir plus de clients ?
+title: Votre outil de bouche à oreille est en plein développement...
 image: progresImage.svg
 ---
 

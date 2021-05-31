@@ -1,8 +1,8 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import LabelText from '../LabelText';
-import StatsBox from '../StatsBox';
+import LabelText from '../../LabelText';
+import StatsBox from '../../StatsBox';
 
 const Testimonial = () => {
   const { testimonial } = useStaticQuery(graphql`

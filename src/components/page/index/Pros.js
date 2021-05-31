@@ -1,8 +1,8 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Image from '../Image';
+import Image from '../../Image';
 
-import LabelText from '../LabelText';
+import LabelText from '../../LabelText';
 
 const Pros = () => {
   const { pros } = useStaticQuery(graphql`

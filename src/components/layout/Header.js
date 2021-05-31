@@ -30,10 +30,10 @@ const Header = ({ logoShown = true, contactShown = true, links = [] }) => {
   `);
 
   return (
-    <header className="sticky top-0 bg-white shadow ">
+    <header className="fixed w-full top-0 bg-white shadow h-16">
       <div className="container flex flex-col sm:flex-row justify-between items-center mx-auto py-4 px-8">
         <div className="flex items-center text-2xl">
-          <div className=" mr-3 4xl">
+          <div className=" mr-3 4xl hidden md:block">
             <Link to="/">
               <Image
                 className="w-32"
@@ -43,7 +43,7 @@ const Header = ({ logoShown = true, contactShown = true, links = [] }) => {
             </Link>
           </div>
         </div>
-        <div className="flex mt-4 sm:mt-0">
+        <div className="my-auto ">
           {links.map((link, index) => (
             <AnchorLink key={index} className="px-4" href={'#' + link.id}>
               {link.label}
@@ -51,7 +51,6 @@ const Header = ({ logoShown = true, contactShown = true, links = [] }) => {
           ))}
         </div>
         <div className="hidden md:block">
-          {/* <Link to="/decouvrir">Découvrir</Link> */}
           <DiscoverLink size="xs" />
         </div>
       </div>

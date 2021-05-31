@@ -1,9 +1,9 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import SplitSection from '../SplitSection';
+import SplitSection from '../../SplitSection';
 
-import Image from '../Image';
+import Image from '../../Image';
 
 const Services = () => {
   const { services } = useStaticQuery(graphql`

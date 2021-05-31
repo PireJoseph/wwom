@@ -1,7 +1,7 @@
 import React from 'react';
 
-import LabelText from '../LabelText';
-import StatsBox from '../StatsBox';
+import LabelText from '../../LabelText';
+import StatsBox from '../../StatsBox';
 
 const Stats = () => (
   <>

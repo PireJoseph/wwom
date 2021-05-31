@@ -3,13 +3,13 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/layout/Layout';
 
-import Hero from '../components/index/Hero';
-import Presentation from '../components/index/Presentation';
-import Services from '../components/index/Services';
-import Testimonial from '../components/index/Testimonial';
-import Pros from '../components/index/Pros';
-import Press from '../components/index/Press';
-import Action from '../components/index/Action';
+import Hero from '../components/layout/Hero';
+import Presentation from '../components/page/index/Presentation';
+import Services from '../components/page/index/Services';
+import Testimonial from '../components/page/index/Testimonial';
+import Pros from '../components/page/index/Pros';
+import Press from '../components/page/index/Press';
+import Action from '../components/page/index/Action';
 
 const Index = ({ data }) => {
   let links = [
@@ -21,8 +21,13 @@ const Index = ({ data }) => {
 
   return (
     <Layout links={links}>
-      <section className="">
-        <Hero />
+      <section>
+        <Hero
+          title={data.hero.childMarkdownRemark.frontmatter.title}
+          image={data.hero.childMarkdownRemark.frontmatter.image}
+          action={data.hero.childMarkdownRemark.frontmatter.action}
+          button={true}
+        />
       </section>
 
       <section id="presentation" className="pb-20 lg:pb-40  lg:px-8">
@@ -67,80 +72,8 @@ export const query = graphql`
         frontmatter {
           title
           action
-        }
-      }
-    }
-    presentation: file(name: { eq: "presentation" }) {
-      childMarkdownRemark {
-        html
-        frontmatter {
-          title
-        }
-      }
-    }
-    testimonial: file(name: { eq: "testimonial" }) {
-      childMarkdownRemark {
-        html
-        frontmatter {
-          title
-        }
-      }
-    }
-    action: file(name: { eq: "action" }) {
-      childMarkdownRemark {
-        html
-        frontmatter {
-          title
-        }
-      }
-    }
-    footer: file(name: { eq: "footer" }) {
-      childMarkdownRemark {
-        frontmatter {
-          title
-        }
-      }
-    }
-    services: allFile(filter: { sourceInstanceName: { eq: "services" } }) {
-      edges {
-        node {
-          sourceInstanceName
-          childMarkdownRemark {
-            html
-            frontmatter {
-              title
-              order
-              text
-            }
-          }
-        }
-      }
-    }
-    pros: allFile(filter: { sourceInstanceName: { eq: "pros" } }) {
-      edges {
-        node {
-          sourceInstanceName
-          childMarkdownRemark {
-            html
-            frontmatter {
-              title
-              order
-            }
-          }
-        }
-      }
-    }
-    press: allFile(filter: { sourceInstanceName: { eq: "press" } }) {
-      edges {
-        node {
-          sourceInstanceName
-          childMarkdownRemark {
-            html
-            frontmatter {
-              title
-              order
-              url
-            }
+          image {
+            publicURL
           }
         }
       }

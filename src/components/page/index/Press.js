@@ -1,9 +1,9 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import LabelText from '../LabelText';
-import Card from '../Card';
-import Image from '../Image';
+import LabelText from '../../LabelText';
+import Card from '../../Card';
+import Image from '../../Image';
 
 // import QuoteOpen from '../../svg/QuoteOpen.svg';
 

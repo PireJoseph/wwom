@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Button from '../Button';
-import DiscoverLink from '../DiscoverLink';
+import Button from '../../Button';
+import DiscoverLink from '../../DiscoverLink';
 
-import { useCmsContent } from '../../hooks/use-cms-content';
+import { useCmsContent } from '../../../hooks/use-cms-content';
 
 const Action = () => {
   const { action } = useCmsContent();

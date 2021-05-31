@@ -119,3 +119,15 @@ collections:
         - { name: title, label: Titre, widget: string }
         - { name: body, label: Contenu, widget: markdown }
 
+
+  - name: discover
+    label: Découvrir
+    media_folder: ''
+    public_folder: ''
+    files: 
+    - name: content
+      label: Contenu
+      file: src/content/items/discover.md
+      fields:
+        - { name: title, label: Titre, widget: string }
+        - { name: image, label: Image, widget: image }
