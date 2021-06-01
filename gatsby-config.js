@@ -30,6 +30,7 @@ module.exports = {
         background_color: `#fefefe`,
         theme_color: `#38647F`,
         display: `standalone`,
+        icon: `${__dirname}/src/svg/icon.svg`,
       },
     },
     {

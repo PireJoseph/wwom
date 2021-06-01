@@ -5,8 +5,6 @@ import LabelText from '../../LabelText';
 import Card from '../../Card';
 import Image from '../../Image';
 
-// import QuoteOpen from '../../svg/QuoteOpen.svg';
-
 const Press = () => {
   const { press } = useStaticQuery(graphql`
     query PressQuery {
