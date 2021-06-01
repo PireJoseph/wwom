@@ -1,5 +1,8 @@
 module.exports = {
   siteMetadata: {
+    title: 'WWOM',
+    description:
+      'WWOM est un outil en ligne indispensable pour générer de nouveaux clients. Passez plus de temps avec vos clients, moins de temps à en chercher.',
     siteUrl: `https://www.wwom.io`,
   },
   plugins: [
@@ -16,6 +19,17 @@ module.exports = {
       resolve: `gatsby-plugin-offline`,
       options: {
         precachePages: [`/`, `/decouvrir`],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `WWOM`,
+        short_name: `WWOM`,
+        start_url: `/`,
+        background_color: `#fefefe`,
+        theme_color: `#38647F`,
+        display: `standalone`,
       },
     },
     {
