@@ -10,7 +10,7 @@ const Footer = () => (
         <ul className="mt-6 leading-loose">
           <li>
             <Link to="/" title="Remonter" className="mt-5">
-              Remonter
+              Accueil
             </Link>
           </li>
           <li>
@@ -34,10 +34,10 @@ const Footer = () => (
         <h2 className="text-lg font-semibold">Accueil</h2>
         <ul className="mt-6 leading-loose">
           <li>
-            <a href="https://codebushi.com">Politique de confidentialité</a>
+            <Link to="/confidentialite">Confidentialité</Link>
           </li>
           <li>
-            <a href="https://codebushi.com">Politique des cookies</a>
+            <Link to="/cookies">Cookies</Link>
           </li>
         </ul>
       </div>
