@@ -1,5 +1,5 @@
 backend:
-    name: github
+    name: git-gateway
     repo: PireJoseph/wwom
     branch: main
 media_folder: static/assets
