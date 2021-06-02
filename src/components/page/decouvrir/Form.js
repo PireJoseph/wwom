@@ -3,12 +3,9 @@ import Button from '../../Button';
 
 import { css } from '@emotion/react';
 
-const inputStyleClass = 'w-full border-2 border-gray-100 rounded-md';
-
-const labelStyleClass = 'text-bold text-danger-darker flex flex-col items-center mb-2';
-
 const inputContainerStyleClass = 'w-full mt-10';
-
+const labelStyleClass = 'text-bold text-primary flex flex-col items-start ml-2 mb-2';
+const inputStyleClass = 'w-full border-2 border-gray-100 rounded-md';
 const inputBackgroundColor = css`
   background-color: #fbfbfb;
 `;
