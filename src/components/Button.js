@@ -2,8 +2,8 @@ import React from 'react';
 
 const sizes = {
   xs: `py-1 px-4 border text-sm font-semibold`,
-  default: `py-2 px-8 border-2 font-bold`,
-  lg: `py-2 px-12 border-4 font-bold text-lg font-bold`,
+  default: `py-2 px-6 border-2 font-bold`,
+  lg: `py-2 px-8 border-4 font-bold text-lg font-bold`,
   xl: `py-4 px-16 border-4  text-xl font-bold text-lg font-bold`,
 };
 
