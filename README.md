@@ -1,25 +1,16 @@
 # Gatsby Lander
 
-This is an experimental starter built using [gatsby-theme-codebushi](https://github.com/codebushi/gatsby-theme-codebushi), a theme which uses [Tailwind CSS](https://tailwindcss.com/).
+WWOM landing site proposal ; Based on [gatsby-theme-codebushi](https://github.com/codebushi/gatsby-theme-codebushi), a Gtasby JS theme which uses [Tailwind CSS](https://tailwindcss.com/).
+Content management is markdown based, and orchestrated by netlify CMS
 
-Check out https://codebushi.com/gatsby-starters-and-themes/ for more Gatsby starters and templates.
+## Current host
 
-## Preview
-
-https://gatsby-lander.surge.sh/
+https://nervous-goodall-f34539.netlify.app/
 
 ## Installation
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-<br/>
-`gatsby new gatsby-starter-lander https://github.com/codebushi/gatsby-starter-lander`
+Clone this repo
 
-Run `gatsby develop` in the terminal to start the dev site.
+Run `gatsby develop`  to start the dev server.
 
-## Notes
-
-These libraries do not yet fully support the upgrade to Gatsby 3.x:
-* gatsby-plugin-react-helmet
-* gatsby-plugin-emotion
-* gatsby-plugin-postcss
-* gatsby-theme-codebushi
+Run `gatsby build` to generate the static website.
