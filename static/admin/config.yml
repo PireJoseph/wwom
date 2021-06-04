@@ -59,7 +59,7 @@ collections:
       - { name: heading, label: En-tête, widget: string }
       - { name: order, label: Ordre, widget: number }
       - { name: url, label: Url, widget: string }
-      - { name: icon, label: Icône, widget: image }
+      - { name: logo, label: Logo, widget: image }
 
   - name: indexPros
     label: Index - Pros
