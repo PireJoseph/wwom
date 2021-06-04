@@ -9,7 +9,6 @@ import Services from '../components/page/index/Services';
 import Testimonial from '../components/page/index/Testimonial';
 import Pros from '../components/page/index/Pros';
 import Press from '../components/page/index/Press';
-import Action from '../components/page/index/Action';
 
 import { ReactComponent as HeroImage } from './../content/pages/index/hero/indexHeroImage.svg';
 
@@ -48,12 +47,8 @@ const Index = ({ data }) => {
         <Pros />
       </section>
 
-      <section id="press" className="  container mx-auto">
+      <section id="press" className="lg:px-32  container mx-auto">
         <Press />
-      </section>
-
-      <section className="container mx-auto pt-20">
-        <Action />
       </section>
     </Layout>
   );

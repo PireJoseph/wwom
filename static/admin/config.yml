@@ -114,20 +114,6 @@ collections:
         - { name: title, label: Titre, widget: string }
         - { name: body, label: Contenu, widget: markdown }       
 
-  - name: indexAction
-    label: Index - Appel à l'action
-    media_folder: ''
-    public_folder: ''
-    publish: false
-    files: 
-    - name: content
-      label: Contenu
-      file: "src/content/pages/index/root/action.md"
-      fields:
-        - { name: title, label: Titre, widget: string }
-        - { name: body, label: Contenu, widget: markdown }
-
-
   - name: discoverHero
     label: Découvrir - Hero
     media_folder: ''
