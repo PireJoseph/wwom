@@ -164,7 +164,7 @@ const Form = (props) => {
 
       <fieldset className="w-full mt-20 flex justify-center">
         <p id="my-form-status"></p>
-        <Button id="my-form-button" type="submit" className={'  w-80 '}>
+        <Button id="my-form-button" type="submit" size="xl" className={'  w-80 '}>
           Recevoir mes 2 MOIS GRATUITS !
         </Button>
         <input type="text" size="default" name="_gotcha" className="hidden" />

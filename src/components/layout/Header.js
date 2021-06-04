@@ -37,7 +37,7 @@ const Header = ({ logoShown = true, contactShown = true, links = [] }) => {
             </AnchorLink>
           ))}
         </div>
-        <DiscoverLink size="xs " />
+        <DiscoverLink size="xs" />
       </div>
     </header>
   );
