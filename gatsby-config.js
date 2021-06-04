@@ -44,29 +44,50 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `items`,
-        path: `${__dirname}/src/content/items`,
+        name: `site`,
+        path: `${__dirname}/src/content/site`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `index`,
+        path: `${__dirname}/src/content/pages/index/root`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `indexHero`,
+        path: `${__dirname}/src/content/pages/index/hero`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pros`,
-        path: `${__dirname}/src/content/pros`,
+        path: `${__dirname}/src/content/pages/index/pros`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `services`,
-        path: `${__dirname}/src/content/services`,
+        path: `${__dirname}/src/content/pages/index/services`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `press`,
-        path: `${__dirname}/src/content/press`,
+        path: `${__dirname}/src/content/pages/index/press`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `discoverHero`,
+        path: `${__dirname}/src/content/pages/discover/hero`,
       },
     },
   ],
