@@ -6,7 +6,8 @@ import { CheckIcon, ExclamationCircleIcon } from '@heroicons/react/outline';
 import { css } from '@emotion/react';
 
 const inputContainerStyleClass = 'w-full mt-10';
-const labelStyleClass = 'text-bold text-primary flex flex-col items-start ml-2 mb-2';
+const labelStyleClass =
+  'text-bold text-lg lg:text-2xl text-primary flex flex-col items-start ml-2 mb-2';
 const inputStyleClass = 'w-full border-2 border-gray-100 rounded-md';
 const inputBackgroundColor = css`
   background-color: #fbfbfb;
@@ -164,7 +165,7 @@ const Form = (props) => {
 
       <fieldset className="w-full mt-20 flex justify-center">
         <p id="my-form-status"></p>
-        <Button id="my-form-button" type="submit" size="xl" className={'  w-80 '}>
+        <Button id="my-form-button" type="submit" size="lg" className={'  w-80 '}>
           Recevoir mes 2 MOIS GRATUITS !
         </Button>
         <input type="text" size="default" name="_gotcha" className="hidden" />
