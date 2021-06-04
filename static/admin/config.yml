@@ -6,12 +6,40 @@ media_folder: static/assets
 public_folder: /assets
 
 collections:
-  - name: services
-    label: Services
-    folder: src/content/services
+  - name: site
+    label: Site
+    media_folder: ''
+    public_folder: ''
+    publish: false
+    files: 
+      - name: config
+        label: Configuration
+        file: src/content/site/site.md
+        fields: 
+        - { name: action, label: Accroche, widget: text }
+        - { name: title, label: Titre, widget: string }
+        - { name: logo, label: Logo, widget: image}
+        
+  - name: siteFooter
+    label: Site - Pied de Page
+    media_folder: ''
+    public_folder: ''
+    publish: false
+    files: 
+    - name: content
+      label: Contenu
+      file: src/content/site/footer.md
+      fields:
+        - { name: title, label: Titre, widget: string }
+        - { name: body, label: Contenu, widget: markdown }       
+
+  - name: indexServices
+    label: Index - Services
+    folder: src/content/pages/index/services
     media_folder: ''
     public_folder: ''
     create: true
+    publish: false
     fields:
       - { name: title, label: Titre, widget: string }
       - { name: order, label: Ordre, widget: number }
@@ -19,12 +47,13 @@ collections:
       - { name: text, label: Texte, widget: text }
       - { name: body, label: Contenu, widget: markdown }
     
-  - name: press
-    label: Presse
-    folder: src/content/press
+  - name: indexPress
+    label: Index - Presse
+    folder: src/content/pages/index/press
     media_folder: ''
     public_folder: ''
     create: true
+    publish: false
     fields:
       - { name: title, label: Titre, widget: string }
       - { name: heading, label: En-tête, widget: string }
@@ -32,102 +61,82 @@ collections:
       - { name: url, label: Url, widget: string }
       - { name: icon, label: Icône, widget: image }
 
-
-  - name: pros
-    label: Pros
-    folder: src/content/pros
+  - name: indexPros
+    label: Index - Pros
+    folder: src/content/pages/index/pros
     media_folder: ''
     public_folder: ''
     create: true
+    publish: false
     fields:
       - { name: title, label: Titre, widget: string }
       - { name: order, label: Ordre, widget: number }
       - { name: icon, label: Icône,  widget: image }
       - { name: body, label: Contenu, widget: markdown }
 
-  - name: site
-    label: Site
+  - name: indexHero
+    label: Index - Hero
     media_folder: ''
     public_folder: ''
-    files: 
-      - name: config
-        label: Configuration
-        file: src/content/items/site.md
-        fields: 
-        - { name: action, label: Accroche, widget: text }
-        - { name: title, label: Titre, widget: string }
-        - { name: logo, label: Logo, widget: image}
-
-  - name: hero
-    label: Hero
-    media_folder: ''
-    public_folder: ''
+    publish: false
     files: 
     - name: content
       label: Contenu
-      file: "src/content/items/hero.md"
+      file: "src/content/pages/index/hero/indexHero.md"
       fields:
         - { name: title, label: Titre, widget: string }
         - { name: action, label: Accroche, widget: text }
         - { name: image, label: Image, widget: image }
 
-  - name: presentation
-    label: Présentation
+  - name: indexPresentation
+    label: Index - Présentation
     media_folder: ''
     public_folder: ''
+    publish: false
     files: 
     - name: content
       label: Contenu
-      file: "src/content/items/presentation.md"
+      file: "src/content/pages/index/root/presentation.md"
       fields:
         - { name: title, label: Titre, widget: string }
         - { name: body, label: Contenu, widget: markdown }
 
-  - name: action
-    label: Appel à l'action
+  - name: indexTestimonial
+    label: Index - Témoignage
     media_folder: ''
     public_folder: ''
+    publish: false
     files: 
     - name: content
       label: Contenu
-      file: "src/content/items/action.md"
+      file: src/content/pages/index/root/testimonial.md
       fields:
         - { name: title, label: Titre, widget: string }
-        - { name: body, label: Contenu, widget: markdown }
+        - { name: body, label: Contenu, widget: markdown }       
 
-  - name: testimonial
-    label: Témoignage
+  - name: indexAction
+    label: Index - Appel à l'action
     media_folder: ''
     public_folder: ''
+    publish: false
     files: 
     - name: content
       label: Contenu
-      file: src/content/items/testimonial.md
-      fields:
-        - { name: title, label: Titre, widget: string }
-        - { name: body, label: Contenu, widget: markdown }
-
-  - name: footer
-    label: Pied de Page
-    media_folder: ''
-    public_folder: ''
-    files: 
-    - name: content
-      label: Contenu
-      file: src/content/items/footer.md
+      file: "src/content/pages/index/root/action.md"
       fields:
         - { name: title, label: Titre, widget: string }
         - { name: body, label: Contenu, widget: markdown }
 
 
-  - name: discover
-    label: Découvrir
+  - name: discoverHero
+    label: Découvrir - Hero
     media_folder: ''
     public_folder: ''
+    publish: false
     files: 
     - name: content
       label: Contenu
-      file: src/content/items/discover.md
+      file: src/content/pages/discover/hero/discoverHero.md
       fields:
         - { name: title, label: Titre, widget: string }
         - { name: image, label: Image, widget: image }
