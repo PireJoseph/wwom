@@ -9,7 +9,7 @@ const Press = () => {
   const { press } = useStaticQuery(graphql`
     query PressQuery {
       press: allFile(
-        filter: { sourceInstanceName: { eq: "press" }, extension: { eq: "md" } }
+        filter: { sourceInstanceName: { eq: "indexPress" }, extension: { eq: "md" } }
         sort: { order: ASC, fields: childMarkdownRemark___frontmatter___order }
       ) {
         edges {

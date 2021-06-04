@@ -11,6 +11,8 @@ import Pros from '../components/page/index/Pros';
 import Press from '../components/page/index/Press';
 import Action from '../components/page/index/Action';
 
+import { ReactComponent as HeroImage } from './../content/pages/index/hero/indexHeroImage.svg';
+
 const Index = ({ data }) => {
   let links = [
     { label: 'Présentation', id: 'presentation' },
@@ -24,7 +26,7 @@ const Index = ({ data }) => {
       <section>
         <Hero
           title={data.hero.childMarkdownRemark.frontmatter.title}
-          image={data.hero.childMarkdownRemark.frontmatter.image}
+          image={<HeroImage />}
           action={data.hero.childMarkdownRemark.frontmatter.action}
           button={true}
         />
@@ -66,15 +68,12 @@ export const query = graphql`
         }
       }
     }
-    hero: file(name: { eq: "hero" }) {
+    hero: file(name: { eq: "indexHero" }) {
       childMarkdownRemark {
         html
         frontmatter {
           title
           action
-          image {
-            publicURL
-          }
         }
       }
     }

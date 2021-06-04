@@ -15,6 +15,8 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    'gatsby-plugin-svgr',
+
     {
       resolve: `gatsby-plugin-offline`,
       options: {
@@ -33,14 +35,7 @@ module.exports = {
         icon: `${__dirname}/src/svg/icon.svg`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-react-svg',
-      options: {
-        rule: {
-          include: `/src/svg/`, // See below to configure properly
-        },
-      },
-    },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -65,21 +60,21 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `pros`,
+        name: `indexPros`,
         path: `${__dirname}/src/content/pages/index/pros`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `services`,
+        name: `indexServices`,
         path: `${__dirname}/src/content/pages/index/services`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `press`,
+        name: `indexPress`,
         path: `${__dirname}/src/content/pages/index/press`,
       },
     },

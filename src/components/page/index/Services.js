@@ -9,7 +9,7 @@ const Services = () => {
   const { services } = useStaticQuery(graphql`
     query ServicesQuery {
       services: allFile(
-        filter: { sourceInstanceName: { eq: "services" }, extension: { eq: "md" } }
+        filter: { sourceInstanceName: { eq: "indexServices" }, extension: { eq: "md" } }
         sort: { order: ASC, fields: childMarkdownRemark___frontmatter___order }
       ) {
         edges {

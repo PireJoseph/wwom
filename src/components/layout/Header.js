@@ -1,8 +1,7 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Link } from 'gatsby';
-
-import Image from '../Image';
+import { ReactComponent as SiteLogo } from './../../content/site/logo.svg';
 import DiscoverLink from '../DiscoverLink';
 
 import { useStaticQuery, graphql } from 'gatsby';
@@ -15,14 +14,6 @@ const Header = ({ logoShown = true, contactShown = true, links = [] }) => {
           html
           frontmatter {
             title
-            logo {
-              publicURL
-              absolutePath
-              relativePath
-              childImageSharp {
-                gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP, AVIF])
-              }
-            }
           }
         }
       }
@@ -35,11 +26,7 @@ const Header = ({ logoShown = true, contactShown = true, links = [] }) => {
         <div className="flex  items-center justify-center text-2xl">
           <div className="4xl ">
             <Link to="/">
-              <Image
-                className="w-32"
-                image={site.childMarkdownRemark.frontmatter.logo}
-                title={site.childMarkdownRemark.frontmatter.title}
-              />
+              <SiteLogo className="w-28" />
             </Link>
           </div>
         </div>

@@ -8,7 +8,7 @@ const Pros = () => {
   const { pros } = useStaticQuery(graphql`
     query ProsQuery {
       pros: allFile(
-        filter: { sourceInstanceName: { eq: "pros" }, extension: { eq: "md" } }
+        filter: { sourceInstanceName: { eq: "indexPros" }, extension: { eq: "md" } }
         sort: { order: ASC, fields: childMarkdownRemark___frontmatter___order }
       ) {
         edges {

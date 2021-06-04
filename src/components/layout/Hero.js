@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from '../Image';
 
 const Hero = ({ title, image, action, button, ...props }) => {
   return (
@@ -17,9 +16,7 @@ const Hero = ({ title, image, action, button, ...props }) => {
           )}
           {!!button && <p className="mt-8 md:mt-12 ">{button}</p>}
         </div>
-        <div className="pt-20 lg:pt-0 lg:w-1/2">
-          <Image className="w-80 h-80 mx-auto" image={image} title={title} />
-        </div>
+        <div className="pt-20 lg:pt-0 lg:w-1/2">{image}</div>
       </div>
     </div>
   );
