@@ -8,9 +8,9 @@ import { useCmsContent } from '../../../hooks/use-cms-content';
 const Action = () => {
   const { action } = useCmsContent();
   return (
-    <section className="py-24 bg-gray-200 rounded-lg text-center text-primary-darker">
+    <section className="py-24 bg-gray-200 rounded-lg text-center text-primary-darker mx-2">
       <h3 className="text-4xl font-semibold">{action.childMarkdownRemark.frontmatter.title}</h3>
-      <div className="mt-8 text-lg font-light text-gray-800">
+      <div className="mt-8 px-4 text-lg font-light text-gray-800">
         <p dangerouslySetInnerHTML={{ __html: action.childMarkdownRemark.html }}></p>
       </div>
       <p className="mt-8">

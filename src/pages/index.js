@@ -30,27 +30,27 @@ const Index = ({ data }) => {
         />
       </section>
 
-      <section id="presentation" className="pb-20 lg:pb-40  lg:px-8">
+      <section id="presentation" className="pb-20 lg:pb-40  container mx-auto">
         <Presentation />
       </section>
 
-      <section id="services" className="px-6 lg:px-32 xl:px-60">
+      <section id="services" className="px-6 lg:px-32 container mx-auto">
         <Services />
       </section>
 
-      <section id="testimonial" className="pt-20 pb-4">
+      <section id="testimonial" className="pt-20 pb-4 container mx-auto">
         <Testimonial />
       </section>
 
-      <section className="my-16 lg:px-8">
+      <section className="my-16  container mx-auto">
         <Pros />
       </section>
 
-      <section id="press" className=" px-12">
+      <section id="press" className="  container mx-auto">
         <Press />
       </section>
 
-      <section className="px-4 md:px-12 lg:px-16 xl:px-24 pt-20">
+      <section className="container mx-auto pt-20">
         <Action />
       </section>
     </Layout>

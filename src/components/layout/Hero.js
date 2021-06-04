@@ -4,7 +4,7 @@ import Image from '../Image';
 const Hero = ({ title, image, action, button, ...props }) => {
   return (
     <div className={props.className + ' bg-gradient-to-b from-secondary-lighter to-white'}>
-      <div className="flex flex-col justify-center lg:flex-row items-center  pt-20 md:pt-40 px-8 md:px-12">
+      <div className="flex flex-col justify-center lg:flex-row items-center  pt-20 md:pt-40 container mx-auto">
         <div className="text-center lg:text-left lg:w-1/2 lg:pl-16 xl:pl-32">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-none text-primary-lighter">
             {title}

@@ -14,10 +14,10 @@ const Decouvrir = ({ data }) => {
           image={data.discover.childMarkdownRemark.frontmatter.image}
         />
       </section>
-      <section className="px-4 md:px-12 lg:px-16 xl:px-24 mt-20 mb-10">
+      <section className="px-4 md:px-12 lg:px-16 xl:px-24 mt-20 mb-10 container mx-auto">
         <Promo />
       </section>
-      <section className="px-4 md:px-12 lg:px-16 xl:px-28">
+      <section className="px-4 md:px-12 lg:px-16 xl:px-28 container mx-auto">
         <Form />
       </section>
     </Layout>

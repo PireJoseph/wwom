@@ -50,8 +50,8 @@ const Services = () => {
                 </div>
                 <h3
                   className={
-                    'inline-flex text-3xl font-bold leading-tight text-primary-darker  ' +
-                    (index % 2 === 0 ? 'xl:self-end' : 'xl:self-start')
+                    'inline-flex  text-center text-3xl font-bold leading-tight text-primary-darker ' +
+                    (index % 2 === 0 ? 'xl:text-right' : 'xl:text-left')
                   }
                 >
                   {node.childMarkdownRemark.frontmatter.text}

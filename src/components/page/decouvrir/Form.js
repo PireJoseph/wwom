@@ -49,7 +49,7 @@ const Form = (props) => {
       props={props}
       action="#"
       method="POST"
-      className="flex flex-col items-center text-2xl w-full md:w-2/3 xl:w-2/5 md:mx-auto"
+      className="flex flex-col items-center text-2xl w-full md:w-2/3 xl:w-2/5 md:mx-auto container"
       onSubmit={handleSubmit}
     >
       <Transition.Root show={isModalOpen} as={Fragment}>
@@ -105,7 +105,6 @@ const Form = (props) => {
                 </div>
                 <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                   <button
-                    type="button"
                     className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-secondary text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 sm:ml-3 sm:w-auto sm:text-sm"
                     onClick={() => setIsModalOpen(false)}
                   >
@@ -165,10 +164,10 @@ const Form = (props) => {
 
       <fieldset className="w-full mt-20 flex justify-center">
         <p id="my-form-status"></p>
-        <Button id="my-form-button" type="submit" className={'  w-80  '}>
+        <Button id="my-form-button" type="submit" className={'  w-80 '}>
           Recevoir mes 2 MOIS GRATUITS !
         </Button>
-        <input type="text" name="_gotcha" className="hidden" />
+        <input type="text" size="default" name="_gotcha" className="hidden" />
       </fieldset>
     </form>
   );
