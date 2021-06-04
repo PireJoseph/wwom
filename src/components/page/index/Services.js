@@ -43,7 +43,7 @@ const Services = () => {
           primarySlot={
             <div>
               <div className="flex flex-col justify-between items-center xl:flex-row">
-                <div className="w-32">
+                <div className="w-32 flex justify-center lg:justify-start">
                   <span className="inline-flex justify-center items-center font-bold text-3xl w-16 h-16 rounded-full bg-secondary text-white mb-4 xl:mb-0">
                     {index + 1}
                   </span>
