@@ -42,20 +42,21 @@ const Press = () => {
         </LabelText>
         <div className="pt-8 flex flex-col items-center align-center xl:flex-row  md:flex-wrap ">
           {press.edges.map(({ node }, index) => (
-            <div key={index} className="flex-1 px-3 ">
+            <div key={index} className="flex-1 px-3  w-full">
               <a
+                className="inline-flex w-full"
                 href={node.childMarkdownRemark.frontmatter.url}
                 title={node.childMarkdownRemark.frontmatter.title}
                 alt={node.childMarkdownRemark.frontmatter.title}
               >
-                <Card className="mb-8 flex flex-col justify-between">
+                <Card className="mb-8 flex flex-col justify-between w-full">
                   <div
                     className="text-xl font-semibold text-left"
                     dangerouslySetInnerHTML={{
                       __html: node.childMarkdownRemark.html,
                     }}
                   ></div>
-                  <div className="flex items-end justify-between mt-8">
+                  <div className="flex w-full items-end justify-between mt-8">
                     <Image
                       className="w-16 "
                       image={node.childMarkdownRemark.frontmatter.image}
