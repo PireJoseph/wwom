@@ -21,8 +21,8 @@ const Header = ({ logoShown = true, contactShown = true, links = [] }) => {
   `);
 
   return (
-    <header className="fixed w-full top-0 bg-white shadow p-4 ">
-      <div className="container mx-auto h-full flex flex-col md:flex-row justify-between items-center">
+    <header className="fixed w-full top-0 bg-white shadow p-4 h-16">
+      <div className="container mx-auto h-full flex flex-row justify-between items-center">
         <div className="flex  items-center justify-center text-2xl">
           <div className="4xl ">
             <Link to="/">
@@ -30,7 +30,7 @@ const Header = ({ logoShown = true, contactShown = true, links = [] }) => {
             </Link>
           </div>
         </div>
-        <div className="flex flex-wrap items center justify-center">
+        <div className="flex items center justify-center hidden md:block">
           {links.map((link, index) => (
             <AnchorLink key={index} className="p-4 " href={'#' + link.id}>
               {link.label}
