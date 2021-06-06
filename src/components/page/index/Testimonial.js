@@ -26,7 +26,7 @@ const Testimonial = () => {
             {testimonial.childMarkdownRemark.frontmatter.title}
           </LabelText>
           <div
-            className=" tracking-wide leading-loose	  text-justify"
+            className="tracking-wide leading-loose text-justify"
             dangerouslySetInnerHTML={{ __html: testimonial.childMarkdownRemark.html }}
           ></div>
         </div>

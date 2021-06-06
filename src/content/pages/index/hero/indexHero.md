@@ -1,5 +1,7 @@
 ---
-title: Améliorez le bouche à oreille de votre business auomatiquement.
-action: Obtenez plus de clients fidèles automatiquement.
+title: indexHero
+action:
+link: /decouvrir
 image: indexHeroImage.svg
 ---
+Obtenez plus de clients fidèles <span class="underline">automatiquement</span>.

@@ -12,42 +12,36 @@ import Press from '../components/page/index/Press';
 
 import { ReactComponent as HeroImage } from './../content/pages/index/hero/indexHeroImage.svg';
 
-const Index = ({ data }) => {
-  let links = [
-    { label: 'Présentation', id: 'presentation' },
-    { label: 'Services', id: 'services' },
-    { label: 'Témoignages', id: 'testimonial' },
-    { label: 'Presse', id: 'press' },
-  ];
+import ButtonLink from '../components/ButtonLink';
 
+const Index = ({ data }) => {
   return (
-    <Layout links={links}>
+    <Layout>
       <section>
         <Hero
-          title={data.hero.childMarkdownRemark.frontmatter.title}
+          title={data.hero.childMarkdownRemark.html}
           image={<HeroImage />}
-          action={data.hero.childMarkdownRemark.frontmatter.action}
-          button={true}
+          link={<ButtonLink link="decouvrir" content="Découvrez WWOM" />}
         />
       </section>
 
-      <section id="presentation" className="pb-20 lg:pb-40  container mx-auto">
+      <section className="py-32  container mx-auto">
         <Presentation />
       </section>
 
-      <section id="services" className="px-6 lg:px-32 container mx-auto">
+      <section className="px-6 lg:px-32 container mx-auto">
         <Services />
       </section>
 
-      <section id="testimonial" className="pt-20 pb-4 container mx-auto">
+      <section className="pt-20 pb-4 container mx-auto">
         <Testimonial />
       </section>
 
-      <section className="my-16  container mx-auto">
+      <section className="mb-16 mt-6  container mx-auto">
         <Pros />
       </section>
 
-      <section id="press" className="lg:px-32  container mx-auto">
+      <section id="press" className="lg:px-32 mt-32  container mx-auto">
         <Press />
       </section>
     </Layout>
@@ -68,7 +62,7 @@ export const query = graphql`
         html
         frontmatter {
           title
-          action
+          link
         }
       }
     }

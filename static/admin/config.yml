@@ -85,7 +85,8 @@ collections:
       file: "src/content/pages/index/hero/indexHero.md"
       fields:
         - { name: title, label: Titre, widget: string }
-        - { name: action, label: Accroche, widget: text }
+        - { name: action, label: Sous-titre, widget: string } 
+        - { name: link, label: Lien, widget: string }
         - { name: image, label: Image, widget: image }
 
   - name: indexPresentation
@@ -124,5 +125,7 @@ collections:
       label: Contenu
       file: src/content/pages/discover/hero/discoverHero.md
       fields:
-        - { name: title, label: Titre, widget: string }
+        - { name: title, label: Titre, widget: string } 
+        - { name: action, label: Sous-titre, widget: string } 
+        - { name: link, label: Lien, widget: string }
         - { name: image, label: Image, widget: image }

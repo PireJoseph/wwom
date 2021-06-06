@@ -11,7 +11,7 @@ const Layout = ({
 }) => {
   return (
     <div className="min-h-screen flex flex-col justify-between  overflow-x-hidden">
-      <Header logoShown={logoShown} contactShown={contactShown} links={links} />
+      <Header />
       <main className={className + ' text-gray-900'}>{children}</main>
       <Footer />
     </div>

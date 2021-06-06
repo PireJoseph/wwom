@@ -6,12 +6,13 @@ import { CheckIcon, ExclamationCircleIcon } from '@heroicons/react/outline';
 import { css } from '@emotion/react';
 
 const inputContainerStyleClass = 'w-full mt-10';
-const labelStyleClass =
-  'text-bold text-lg lg:text-2xl text-primary flex flex-col items-start ml-2 mb-2';
-const inputStyleClass = 'w-full border-2 border-gray-100 rounded-md';
+const inputStyleClass = 'w-full border-2 border-gray-100 rounded-md p-2';
+
 const inputBackgroundColor = css`
   background-color: #fbfbfb;
 `;
+const checkboxStyleClass = 'mr-4';
+const checkboxLabelStyleClass = 'text-sm font-bold';
 
 const Form = (props) => {
   let [isModalOpen, setIsModalOpen] = useState(false);
@@ -119,47 +120,86 @@ const Form = (props) => {
       </Transition.Root>
       <fieldset className="w-full mt-10">
         <div className={inputContainerStyleClass}>
-          <label className={labelStyleClass}>Nom</label>
           <input
             css={inputBackgroundColor}
             className={inputStyleClass}
             type="text"
             name="lastName"
+            placeholder="Nom*"
+            required
           />
         </div>
+
         <div className={inputContainerStyleClass}>
-          <label className={labelStyleClass}>Prénom</label>
           <input
             css={inputBackgroundColor}
             type="text"
             name="firstName"
             className={inputStyleClass}
+            placeholder="Prénom*"
+            required
           />
         </div>
+
         <div className={inputContainerStyleClass}>
-          <label className={labelStyleClass}>Email</label>
           <input
             css={inputBackgroundColor}
             type="email"
             name="email"
             className={inputStyleClass}
+            placeholder="Adresse mail*"
             required
           />
         </div>
+
         <div className={inputContainerStyleClass}>
-          <label className={labelStyleClass}>Téléphone</label>
-          <input css={inputBackgroundColor} type="phone" name="phone" className={inputStyleClass} />
+          <input
+            css={inputBackgroundColor}
+            type="phone"
+            name="phone"
+            className={inputStyleClass}
+            placeholder="Téléphone"
+          />
         </div>
+
         <div className={inputContainerStyleClass}>
-          <label className={labelStyleClass}>Message</label>
           <textarea
             css={inputBackgroundColor}
             type="text"
             name="message"
             className={inputStyleClass}
             rows="8"
+            placeholder="Des questions ? Des remarques ? Ou vous voulez simplement nous dire bonjour ? Contactez nous ici 👇"
             required
           ></textarea>
+        </div>
+
+        <div className={inputContainerStyleClass}>
+          <input
+            css={inputBackgroundColor}
+            type="checkbox"
+            name="confidentiality"
+            className={checkboxStyleClass}
+            required
+          />
+          <label className={checkboxLabelStyleClass}>
+            En cochant cette case, je marque mon accord pour que mes informations soient traitées
+            par WWOM conformément à la politique de confidentialité . *
+          </label>
+        </div>
+
+        <div className={inputContainerStyleClass}>
+          <input
+            css={inputBackgroundColor}
+            type="checkbox"
+            name="subscribe"
+            className={checkboxStyleClass}
+          />
+          <label className={checkboxLabelStyleClass}>
+            Je marque mon consentement pour que mes informations soient utilisées pour m’envoyer les
+            dernières offres, la newsletter et les communications commerciales. Vous pouvez toujours
+            retirer ce consentement via l’option « se désinscrire » prévue dans nos communications.
+          </label>
         </div>
       </fieldset>
 

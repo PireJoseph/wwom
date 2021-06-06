@@ -1,8 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import Card from '../../Card';
-import DiscoverLink from '../../DiscoverLink';
+import ButtonLink from '../../ButtonLink';
 
 const Presentation = () => {
   const { presentation } = useStaticQuery(graphql`
@@ -18,17 +17,14 @@ const Presentation = () => {
     }
   `);
   return (
-    <div className="container mx-auto text-center py-8 md:pt-64  px-2 md:px-12 lg:px-24 xl:px-32 text-primary">
-      <h2 className="text-3xl lg:text-5xl font-semibold text-primary-darker">
-        {presentation.childMarkdownRemark.frontmatter.title}
-      </h2>
+    <div className="container mx-auto text-center  px-2 md:px-12 lg:px-24 xl:px-32">
       <div className="flex flex-col sm:flex-row sm:-mx-3">
         <div className="flex-1 px-3">
           <div
-            className="mb-8 mt-2 text-xl font-light leading-loose text-xl"
+            className="mb-8 mt-2 text-xl   text-primary"
             dangerouslySetInnerHTML={{ __html: presentation.childMarkdownRemark.html }}
           ></div>
-          <DiscoverLink />
+          <ButtonLink content="Découvez WWOM" />
         </div>
       </div>
     </div>

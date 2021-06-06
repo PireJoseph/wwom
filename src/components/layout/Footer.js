@@ -14,16 +14,6 @@ const Footer = () => (
             </Link>
           </li>
           <li>
-            <Link to="/sitemap.xml" title="sitemap" className="mt-5">
-              Sitemap
-            </Link>
-          </li>
-          <li>
-            <Link to="/robots.txt" title="robots" className="mt-5">
-              Robots
-            </Link>
-          </li>
-          <li>
             <a href="https://github.com/PireJoseph/wwom" title="code source" className="mt-5">
               Code source
             </a>

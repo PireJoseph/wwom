@@ -10,11 +10,13 @@ const Decouvrir = ({ data }) => {
   return (
     <Layout>
       <section>
-        <Hero title={data.discover.childMarkdownRemark.frontmatter.title} image={<HeroImage />} />
+        <Hero title={data.discover.childMarkdownRemark.html} image={<HeroImage />} />
       </section>
+
       <section className="px-4 md:px-12 lg:px-16 xl:px-24 mt-20 mb-10 container mx-auto">
         <Promo />
       </section>
+
       <section className="px-4 md:px-12 lg:px-16 xl:px-28 container mx-auto">
         <Form />
       </section>
@@ -28,6 +30,7 @@ export const query = graphql`
         html
         frontmatter {
           title
+          link
         }
       }
     }

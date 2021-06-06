@@ -1,12 +1,11 @@
 import React from 'react';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Link } from 'gatsby';
 import { ReactComponent as SiteLogo } from './../../content/site/logo.svg';
-import DiscoverLink from '../DiscoverLink';
+import ButtonLink from '../ButtonLink';
 
 import { useStaticQuery, graphql } from 'gatsby';
 
-const Header = ({ logoShown = true, contactShown = true, links = [] }) => {
+const Header = () => {
   const { site } = useStaticQuery(graphql`
     query HeaderQuery {
       site: file(name: { eq: "site" }) {
@@ -30,14 +29,7 @@ const Header = ({ logoShown = true, contactShown = true, links = [] }) => {
             </Link>
           </div>
         </div>
-        <div className="flex items center justify-center hidden md:block">
-          {links.map((link, index) => (
-            <AnchorLink key={index} className="p-4 " href={'#' + link.id}>
-              {link.label}
-            </AnchorLink>
-          ))}
-        </div>
-        <DiscoverLink size="xs" />
+        <ButtonLink size="xs" link="/decouvrir" />
       </div>
     </header>
   );
