@@ -1,4 +1,4 @@
-# Gatsby Lander
+# WWOM
 
 WWOM landing site proposal ; Based on [gatsby-theme-codebushi](https://github.com/codebushi/gatsby-theme-codebushi), a Gtasby JS theme which uses [Tailwind CSS](https://tailwindcss.com/).
 Content management is markdown based, and orchestrated by netlify CMS
